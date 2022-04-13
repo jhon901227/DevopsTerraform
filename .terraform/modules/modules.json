@@ -1,0 +1,1 @@
+{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"network","Source":"./modules/networking","Dir":"modules/networking"},{"Key":"virtualMachine","Source":"./modules/virtual_machine","Dir":"modules/virtual_machine"},{"Key":"resource_group","Source":"./modules/base","Dir":"modules/base"}]}
