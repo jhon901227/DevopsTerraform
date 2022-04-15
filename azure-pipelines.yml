@@ -22,3 +22,8 @@ steps:
   inputs:
     Contents: '**'
     TargetFolder: '$(build.artifactstagingdirectory)/Terraform'
+- task: PublishBuildArtifacts@1
+  inputs:
+        PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+        ArtifactName: 'terraform'
+        publishLocation: 'Container'
