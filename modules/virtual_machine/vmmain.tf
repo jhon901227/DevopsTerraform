@@ -9,7 +9,7 @@ resource "azurerm_linux_virtual_machine" "LinuxOracle7" {
   resource_group_name = var.rgname
   location            = var.location_name
   size                = var.sizevm
-  admin_username      = "adminuser"
+  admin_username      = "adminuser1"
   network_interface_ids = [
     var.nic_id,
   ]
@@ -18,7 +18,7 @@ resource "azurerm_linux_virtual_machine" "LinuxOracle7" {
 
   
   admin_ssh_key {
-    username   = "adminuser"
+    username   = "adminuser1"
     public_key = tls_private_key.privatekey_ssh.public_key_openssh
   }
 
