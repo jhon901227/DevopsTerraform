@@ -2,7 +2,7 @@
   algorithm = "RSA"
   rsa_bits  = 4096
   }
-
+#john herrera comment
 resource "azurerm_linux_virtual_machine" "LinuxOracle7" {
   
   name                = var.vm_name
