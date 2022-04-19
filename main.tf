@@ -17,6 +17,9 @@ module "network" {
   Nic_name           = var.Nic_name
   nsg_name           = var.nsg_name
   publicIPName       = var.publicIPName
+  depends_on = [
+    module.resource_group
+  ]
 }
 
 module "virtualMachine" {
@@ -31,6 +34,7 @@ module "virtualMachine" {
   offer         = var.offer
   sku           = var.sku
   versionvm       = var.versionvm
+ 
 
 }
 
