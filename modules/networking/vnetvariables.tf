@@ -34,3 +34,7 @@ type = string
 variable "publicIPName" {
   
 }
+variable "rules" {
+type=list
+
+}

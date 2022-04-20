@@ -41,16 +41,20 @@ resource "azurerm_network_security_group" "nsg" {
   location            = var.location_name
   resource_group_name = var.rgname
 
-  security_rule {
+  
+  dynamic security_rule {
+    for_each=var.rules
+    content{
     name                       = "test123"
     priority                   = 100
     direction                  = "Inbound"
     access                     = "Allow"
     protocol                   = "Tcp"
     source_port_range          = "*"
-    destination_port_range     = "22"
+    destination_port_range     = security_rule.value
     source_address_prefix      = "*"
     destination_address_prefix = "*"
+    }
   }
 
   tags = {

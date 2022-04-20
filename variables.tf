@@ -52,3 +52,8 @@ variable "sku" {
 variable "versionvm" {
 
 }
+
+variable "rules" {
+  type = list(any)
+
+}

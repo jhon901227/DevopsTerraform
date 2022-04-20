@@ -17,6 +17,7 @@ module "network" {
   Nic_name           = var.Nic_name
   nsg_name           = var.nsg_name
   publicIPName       = var.publicIPName
+  rules              = var.rules
   depends_on = [
     module.resource_group
   ]
@@ -33,16 +34,16 @@ module "virtualMachine" {
   publisher     = var.publisher
   offer         = var.offer
   sku           = var.sku
-  versionvm       = var.versionvm
- 
+  versionvm     = var.versionvm
+
 
 }
 
-output "publickey"{
-  value=module.virtualMachine.tls_private_key
+output "publickey" {
+  value     = module.virtualMachine.tls_private_key
   sensitive = true
 }
 
-output "publicIp"{
-  value=module.network.publicIp
+output "publicIp" {
+  value = module.network.publicIp
 }
