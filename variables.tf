@@ -57,3 +57,7 @@ variable "rules" {
   type = list(any)
 
 }
+
+variable "priority"{
+type=list    
+}

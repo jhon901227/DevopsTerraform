@@ -22,3 +22,4 @@ offer="UbuntuServer"
 sku="18.04-LTS"
 versionvm="latest"
 rules=["22","80","8080"]
+priority=["100","200","300"]

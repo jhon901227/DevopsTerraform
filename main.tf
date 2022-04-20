@@ -18,6 +18,7 @@ module "network" {
   nsg_name           = var.nsg_name
   publicIPName       = var.publicIPName
   rules              = var.rules
+  priority=var.priority
   depends_on = [
     module.resource_group
   ]

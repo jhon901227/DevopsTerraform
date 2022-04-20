@@ -38,3 +38,6 @@ variable "rules" {
 type=list
 
 }
+variable "priority"{
+type=list    
+}

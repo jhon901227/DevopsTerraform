@@ -45,8 +45,8 @@ resource "azurerm_network_security_group" "nsg" {
   dynamic security_rule {
     for_each=var.rules
     content{
-    name                       = "test123"
-    priority                   = 100
+    name                       = "rule${security_rule.value}"
+    priority                   = var.priority[security_rule.key]
     direction                  = "Inbound"
     access                     = "Allow"
     protocol                   = "Tcp"

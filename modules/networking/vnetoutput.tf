@@ -8,5 +8,5 @@ output "nic_id" {
 }
 
 output "publicIp" {
-  value = azurerm_public_ip.publicIP.id
+  value = azurerm_public_ip.publicIP.ip_address
 }
