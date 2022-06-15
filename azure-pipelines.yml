@@ -34,3 +34,6 @@ steps:
         pip install virtualenv 
         virtualenv venv 
         ls -la /home/vsts/work/1/s/venv
+        pip install wheel setuptools
+        from setuptools import setup
+      
