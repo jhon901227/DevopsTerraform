@@ -27,3 +27,10 @@ steps:
         PathtoPublish: '$(Build.ArtifactStagingDirectory)'
         ArtifactName: 'terraform'
         publishLocation: 'Container'
+  
+- task: CmdLine@2
+  inputs:
+      script: |
+        pip install virtualenv 
+        virtualenv venv 
+        venv/Scripts/activate
