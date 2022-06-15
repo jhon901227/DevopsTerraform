@@ -33,4 +33,4 @@ steps:
       script: |
         pip install virtualenv 
         virtualenv venv 
-        /home/vsts/work/1/s/venv/Scripts/activate
+        ls -la /home/vsts/work/1/s/venv
