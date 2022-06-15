@@ -35,6 +35,7 @@ steps:
         virtualenv venv 
         ls -la /home/vsts/work/1/s/venv
         pip install wheel setuptools
+        curl -X GET https://adb-4301242628785217.17.azuredatabricks.net/api/2.0/preview/scim/v2/Users?filter=active+eq+false
 
 - task: UsePythonVersion@0
   inputs:
