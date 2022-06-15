@@ -35,5 +35,14 @@ steps:
         virtualenv venv 
         ls -la /home/vsts/work/1/s/venv
         pip install wheel setuptools
-        from setuptools import setup
+- task: PythonScript@0
+  inputs:
+            scriptSource: 'inline'
+            script: |
+              import pandas as pd
+              import urllib.request
+              import io
+              
+              with urllib.request.urlopen('http://server:5000/get-artifact?path=dataframe.csv&run_uuid=75hf8234h9dj29jr943909') as f:
+                  file = pd.read_csv(io.BytesIO(f.read()))
       
